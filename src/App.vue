@@ -1,13 +1,21 @@
 <template>
   <div id="app">
     <div id="nav">
+      <RequestLoading></RequestLoading>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
   </div>
 </template>
-
+<script>
+import RequestLoading from './components/RequestLoading'
+export default {
+  components: {
+    RequestLoading
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
